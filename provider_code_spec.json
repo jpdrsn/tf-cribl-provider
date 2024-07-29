@@ -1,0 +1,150 @@
+{
+	"provider": {
+		"name": "cribl"
+	},
+	"resources": [
+		{
+			"name": "user",
+			"schema": {
+				"attributes": [
+					{
+						"name": "disabled",
+						"bool": {
+							"computed_optional_required": "required"
+						}
+					},
+					{
+						"name": "email",
+						"string": {
+							"computed_optional_required": "required"
+						}
+					},
+					{
+						"name": "first",
+						"string": {
+							"computed_optional_required": "required"
+						}
+					},
+					{
+						"name": "id",
+						"string": {
+							"computed_optional_required": "required",
+							"description": "Unique ID"
+						}
+					},
+					{
+						"name": "last",
+						"string": {
+							"computed_optional_required": "required"
+						}
+					},
+					{
+						"name": "password",
+						"string": {
+							"computed_optional_required": "computed_optional"
+						}
+					},
+					{
+						"name": "roles",
+						"list": {
+							"computed_optional_required": "computed_optional",
+							"element_type": {
+								"string": {}
+							}
+						}
+					},
+					{
+						"name": "username",
+						"string": {
+							"computed_optional_required": "required"
+						}
+					},
+					{
+						"name": "count",
+						"int64": {
+							"computed_optional_required": "computed",
+							"description": "number of items present in the items array"
+						}
+					},
+					{
+						"name": "items",
+						"list_nested": {
+							"computed_optional_required": "computed",
+							"nested_object": {
+								"attributes": [
+									{
+										"name": "disabled",
+										"bool": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "email",
+										"string": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "first",
+										"string": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "id",
+										"string": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "last",
+										"string": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "password",
+										"string": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "roles",
+										"list": {
+											"computed_optional_required": "computed",
+											"element_type": {
+												"string": {}
+											}
+										}
+									},
+									{
+										"name": "username",
+										"string": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "current_password",
+										"string": {
+											"computed_optional_required": "computed"
+										}
+									},
+									{
+										"name": "teams",
+										"list": {
+											"computed_optional_required": "computed",
+											"element_type": {
+												"string": {}
+											}
+										}
+									}
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	],
+	"version": "0.1"
+}
